@@ -17,10 +17,17 @@ export function getPostData() {
 
 export function getAllPostIds() {
   return data.map((data) => {
+    const id = data.name.split(" ").join("");
     return {
       params: {
-        id: data.name.replaceAll(" ", ""),
+        id: id,
       },
     };
   });
+}
+
+export function getOnePostData(id) {
+  const filtered = data.filter((data) => data.name.split(" ").join("") === id);
+
+  return { id, ...filtered };
 }

@@ -1,0 +1,102 @@
+.galleryContent {
+  max-height: 80vh;
+  padding: 50px 0px;
+  display: grid;
+  border-top: solid #e5e5e5 1px;
+  grid-template-columns: repeat(24, 1fr);
+  grid-template-rows: fit-content(50%);
+  gap: 10px;
+}
+
+.imageContainer {
+  position: relative;
+  grid-column: 1/9;
+  grid-row-start: 1;
+  grid-row-end: 8;
+}
+
+.heroImage {
+  width: 100%;
+}
+
+.viewImage {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  width: 152px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: black;
+  cursor: pointer;
+}
+
+.artistImage {
+  position: absolute;
+  right: -175px;
+  bottom: -50px;
+}
+
+.viewText {
+  color: white;
+  letter-spacing: 2.14px;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 700;
+  .viewsvg {
+    pointer-events: none;
+  }
+  .viewText {
+    pointer-events: none;
+  }
+}
+
+.titleContainer {
+  background-color: white;
+  margin-top: -1px;
+  padding-left: 50px;
+  grid-column: 8/15;
+  grid-row-start: 1;
+  grid-row-end: auto;
+  z-index: 3;
+  .paintingName {
+    padding-bottom: 30px;
+  }
+  .artistName {
+    padding-bottom: 50px;
+    color: #7d7d7d;
+  }
+}
+
+.copyContainer {
+  position: relative;
+  grid-column: 16/24;
+  grid-row-start: 1;
+  grid-row-end: 8;
+  .display {
+    font-size: 20rem;
+    font-family: "Libre Baskerville", serif;
+    color: #f3f3f3;
+    font-weight: 700;
+    line-height: 150px;
+  }
+  .bodyCopy {
+    padding-left: 1rem;
+    margin-top: -3rem;
+    color: #7d7d7d;
+    width: 80%;
+  }
+  .sourceLink {
+    display: block;
+    font-size: 0.9rem;
+    letter-spacing: 1.93px;
+    font-family: "Libre Baskerville", serif;
+    font-weight: 700;
+    color: #7d7d7d;
+    text-decoration: underline;
+    text-transform: uppercase;
+    padding: 5rem 0rem 0rem 1rem;
+  }
+}
