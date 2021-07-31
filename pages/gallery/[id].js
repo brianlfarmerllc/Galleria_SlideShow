@@ -4,7 +4,6 @@ import { getAllPostIds, getOnePostData } from "../../utils/photos";
 import styles from "./Gallery.module.scss";
 
 export async function getStaticProps({ params }) {
-  console.log(params.id);
   const postData = await getOnePostData(params.id);
   return {
     props: {
@@ -22,18 +21,15 @@ export async function getStaticPaths() {
 }
 
 export default function Post({ postData }) {
+  console.log(postData.name);
   return (
     <Layout>
       <Head>
-        <title>{postData[0].name}</title>
+        <title>{postData.name}</title>
       </Head>
       <article className={styles.galleryContent}>
         <div className={styles.imageContainer}>
-          <img
-            className={styles.heroImage}
-            src={postData[0].images.hero.large}
-            alt={postData[0].name}
-          />
+          <img className={styles.heroImage} src={postData.images.hero.large} alt={postData.name} />
           <div className={styles.viewImage}>
             <img
               className={styles.viewsvg}
@@ -44,18 +40,18 @@ export default function Post({ postData }) {
           </div>
           <img
             className={styles.artistImage}
-            src={postData[0].artist.image}
-            alt={postData[0].artist.name}
+            src={postData.artist.image}
+            alt={postData.artist.name}
           />
         </div>
         <div className={styles.titleContainer}>
-          <h1 className={styles.paintingName}>{postData[0].name}</h1>
-          <h4 className={styles.artistName}>{postData[0].artist.name}</h4>
+          <h1 className={styles.paintingName}>{postData.name}</h1>
+          <h4 className={styles.artistName}>{postData.artist.name}</h4>
         </div>
         <div className={styles.copyContainer}>
-          <div className={styles.display}>{postData[0].year}</div>
-          <h6 className={styles.bodyCopy}>{postData[0].description}</h6>
-          <a href={postData[0].source} className={styles.sourceLink} target="blank">
+          <div className={styles.display}>{postData.year}</div>
+          <h6 className={styles.bodyCopy}>{postData.description}</h6>
+          <a href={postData.source} className={styles.sourceLink} target="blank">
             go to source
           </a>
         </div>

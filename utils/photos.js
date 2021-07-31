@@ -3,8 +3,8 @@ import data from "../db/data.json";
 export function getPostData() {
   const allPostData = [];
 
-  data.map((image) => {
-    const id = image.name.split(" ").join("");
+  data.map((image, index) => {
+    const id = index;
 
     allPostData.push({
       id,
@@ -16,18 +16,18 @@ export function getPostData() {
 }
 
 export function getAllPostIds() {
-  return data.map((data) => {
-    const id = data.name.split(" ").join("");
+  return data.map((data, index) => {
+    const id = index;
     return {
       params: {
-        id: id,
+        id: id.toString(),
       },
     };
   });
 }
 
 export function getOnePostData(id) {
-  const filtered = data.filter((data) => data.name.split(" ").join("") === id);
+  const filtered = data[id];
 
   return { id, ...filtered };
 }

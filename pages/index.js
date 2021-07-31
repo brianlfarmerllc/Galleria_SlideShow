@@ -19,7 +19,7 @@ export default function Home({ allPostsData }) {
         <section className={styles.mainGallery}>
           <div className={styles.imageList}>
             {allPostsData.map(({ id, images, name, artist }) => (
-              <div className={styles.listItem}>
+              <div key={id} className={styles.listItem}>
                 <Link href={`/gallery/${id}`}>
                   <a>
                     <img className={styles.imageItem} src={images.thumbnail} alt={id} />
