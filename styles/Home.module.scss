@@ -1,0 +1,46 @@
+.mainGallery {
+  border-top: solid #e5e5e5 1px;
+}
+
+.imageList {
+  padding-top: 40px;
+  display: column;
+  column-count: 4;
+  gap: 40px;
+}
+
+.listItem {
+  padding-bottom: 40px;
+  position: relative;
+}
+
+.imageItem {
+  align-self: start;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5));
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 40px;
+  left: 0;
+  right: 0;
+  background: rgba($color: #000000, $alpha: 0.3);
+}
+
+.imageText {
+  position: absolute;
+  bottom: 70px;
+  left: 40px;
+  width: 80%;
+}
+
+.paintingName {
+  color: white;
+  padding-bottom: 8px;
+}
+
+.artistName {
+  color: #e5e5e5;
+}
