@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import Layout from "../../components/layout";
-import { getAllPostIds, getOnePostData } from "../../utils/photos";
+import { getAllPostIds, getOnePostData, useMediaQuery } from "../../utils/photos";
 import styles from "./Gallery.module.scss";
 
 export async function getStaticProps({ params }) {
@@ -22,6 +22,7 @@ export async function getStaticPaths() {
 }
 
 export default function Post({ postData }) {
+  const is760 = useMediaQuery(760);
   const index = parseInt(postData.id);
   const next = index === 14 ? 0 : index + 1;
   const previous = index > 0 ? index - 1 : 14;
@@ -35,7 +36,11 @@ export default function Post({ postData }) {
       </Head>
       <article className={styles.galleryContent}>
         <div className={styles.imageContainer}>
-          <img className={styles.heroImage} src={postData.images.hero.large} alt={postData.name} />
+          <img
+            className={styles.heroImage}
+            src={is760 ? postData.images.hero.small : postData.images.hero.large}
+            alt={postData.name}
+          />
           <div className={styles.viewImage}>
             <img
               className={styles.viewsvg}

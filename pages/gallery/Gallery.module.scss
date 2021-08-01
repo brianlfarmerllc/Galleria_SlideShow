@@ -83,6 +83,7 @@
   font-weight: 700;
   line-height: 150px;
   width: fit-content;
+  height: fit-content;
   position: absolute;
   top: 50px;
   right: 0%;
@@ -92,6 +93,7 @@
   position: relative;
   grid-column: 17/25;
   grid-row-start: 1;
+  height: fit-content;
 
   .bodyCopy {
     margin-top: 13rem;
@@ -163,7 +165,7 @@
 @media screen and (max-width: 1140px) {
   .galleryContent {
     grid-template-columns: repeat(24, 1fr);
-    grid-template-rows: 1fr, 100%;
+    grid-template-rows: 1fr 100%;
   }
   .imageContainer {
     grid-column: 3/16;
@@ -218,6 +220,58 @@
 
     .bodyCopy {
       margin-top: 13rem;
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .imageContainer {
+    grid-column: 1/25;
+  }
+  .artistImage {
+    width: 64px;
+    right: unset;
+    left: 0;
+    bottom: -90px;
+    z-index: 4;
+  }
+  .viewImage {
+    bottom: unset;
+    top: 30px;
+  }
+  .titleContainer {
+    grid-column: 1 /22;
+    grid-row-start: 2;
+    width: 100%;
+    margin-left: -1px;
+    margin-top: -90px;
+    padding: 20px;
+    .paintingName {
+      font-size: 2.4rem;
+      line-height: 29px;
+      padding: 0 0 1rem 0;
+    }
+    .artistName {
+      font-size: 1.5rem;
+      padding: 0;
+    }
+  }
+
+  .display {
+    position: unset;
+    font-size: 100px;
+    grid-column-start: 1;
+    grid-column-end: 25;
+    justify-self: end;
+    line-height: 100px;
+    margin-top: 7rem;
+  }
+  .copyContainer {
+    grid-column: 1/25;
+
+    .bodyCopy {
+      margin-top: 14rem;
       width: 100%;
     }
   }
