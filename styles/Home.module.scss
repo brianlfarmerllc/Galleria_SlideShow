@@ -9,15 +9,24 @@
   gap: 40px;
 }
 
+.imageList > * {
+  break-inside: avoid;
+}
+
 .listItem {
   padding-bottom: 40px;
   position: relative;
 }
 
+.anchor {
+  &:hover + .overlay {
+    background: rgba($color: #c0c0c0, $alpha: 0.4);
+  }
+}
+
 .imageItem {
   align-self: start;
   width: 100%;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5));
 }
 
 .overlay {
@@ -35,6 +44,7 @@
   bottom: 70px;
   left: 40px;
   width: 80%;
+  cursor: pointer;
 }
 
 .paintingName {
@@ -44,4 +54,20 @@
 
 .artistName {
   color: #e5e5e5;
+}
+
+@media screen and (max-width: 1280px) {
+  .imageList {
+    column-count: 3;
+  }
+}
+@media screen and (max-width: 960px) {
+  .imageList {
+    column-count: 2;
+  }
+}
+@media screen and (max-width: 660px) {
+  .imageList {
+    column-count: 1;
+  }
 }

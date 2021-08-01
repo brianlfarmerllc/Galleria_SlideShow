@@ -54,8 +54,8 @@ export default function Post({ postData }) {
           <h1 className={styles.paintingName}>{postData.name}</h1>
           <h4 className={styles.artistName}>{postData.artist.name}</h4>
         </div>
+        <div className={styles.display}>{postData.year}</div>
         <div className={styles.copyContainer}>
-          <div className={styles.display}>{postData.year}</div>
           <h6 className={styles.bodyCopy}>{postData.description}</h6>
           <a href={postData.source} className={styles.sourceLink} target="blank">
             go to source

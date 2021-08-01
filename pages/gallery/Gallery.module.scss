@@ -1,16 +1,18 @@
 .galleryContent {
-  max-height: 80vh;
+  min-height: 72vh;
   padding: 50px 0px;
   display: grid;
   border-top: solid #e5e5e5 1px;
   grid-template-columns: repeat(24, 1fr);
+  grid-template-rows: 1fr;
+  position: relative;
 }
 
 .imageContainer {
   position: relative;
   grid-column: 1/9;
   grid-row-start: 1;
-  grid-row-end: auto;
+  height: fit-content;
 }
 
 .heroImage {
@@ -60,6 +62,7 @@
   padding-left: 50px;
   grid-column: 8/15;
   grid-row-start: 1;
+  width: fit-content;
   min-height: 0;
   min-width: 0;
   height: max-content;
@@ -73,23 +76,27 @@
   }
 }
 
+.display {
+  font-size: 20rem;
+  font-family: "Libre Baskerville", serif;
+  color: #f3f3f3;
+  font-weight: 700;
+  line-height: 150px;
+  width: fit-content;
+  position: absolute;
+  top: 50px;
+  right: 0%;
+}
+
 .copyContainer {
   position: relative;
-  grid-column: 16/24;
+  grid-column: 17/25;
   grid-row-start: 1;
-  grid-row-end: 8;
-  .display {
-    font-size: 20rem;
-    font-family: "Libre Baskerville", serif;
-    color: #f3f3f3;
-    font-weight: 700;
-    line-height: 150px;
-  }
+
   .bodyCopy {
-    padding-left: 1rem;
-    margin-top: -3rem;
+    margin-top: 13rem;
     color: #7d7d7d;
-    width: 80%;
+    width: 85%;
   }
   .sourceLink {
     display: block;
@@ -108,8 +115,6 @@
 }
 
 .controller {
-  position: absolute;
-  bottom: 0;
   margin: auto;
   display: flex;
   flex-direction: row;
@@ -117,9 +122,12 @@
   justify-content: space-between;
   width: 100%;
   max-width: 1360px;
+  height: 10.7vh;
+  min-height: 96px;
   padding: 25px 0px;
   border-top: solid 2px;
   border-image-slice: 1;
+  margin-top: 2rem;
 
   .controllerH3 {
     padding-bottom: 5px;
@@ -136,6 +144,81 @@
       &:hover {
         opacity: 0.4;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .copyContainer {
+    grid-column: 16/25;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .copyContainer {
+    grid-column: 15/25;
+  }
+}
+
+@media screen and (max-width: 1140px) {
+  .galleryContent {
+    grid-template-columns: repeat(24, 1fr);
+    grid-template-rows: 1fr, 100%;
+  }
+  .imageContainer {
+    grid-column: 3/16;
+  }
+  .artistImage {
+    position: absolute;
+    right: -175px;
+    bottom: 170px;
+  }
+  .titleContainer {
+    grid-column: 11 /24;
+  }
+  .display {
+    display: unset;
+    right: unset;
+    grid-row-start: 2;
+    grid-column-start: 4;
+    margin-top: 2rem;
+  }
+  .copyContainer {
+    grid-column: 6/20;
+    grid-row-start: 2;
+
+    .bodyCopy {
+      margin-top: 13rem;
+      width: 100%;
+    }
+  }
+}
+@media screen and (max-width: 990px) {
+  .imageContainer {
+    grid-column: 1/16;
+  }
+  .artistImage {
+    position: absolute;
+    right: -175px;
+    bottom: 100px;
+  }
+  .titleContainer {
+    grid-column: 9 /24;
+  }
+  .display {
+    display: unset;
+    right: unset;
+    grid-row-start: 2;
+    grid-column-start: 4;
+    margin-top: 2rem;
+  }
+  .copyContainer {
+    grid-column: 6/20;
+    grid-row-start: 2;
+
+    .bodyCopy {
+      margin-top: 13rem;
+      width: 100%;
     }
   }
 }

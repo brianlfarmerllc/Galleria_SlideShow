@@ -5,7 +5,8 @@
   align-items: center;
   justify-content: space-between;
   max-width: 1360px;
-  padding: 40px 0px;
+  min-height: 120px;
+  height: 14.2vh;
 }
 
 .logo {
@@ -27,4 +28,34 @@
 .mainView {
   margin: auto;
   max-width: 1360px;
+}
+
+@media screen and (max-width: 1375px) {
+  .mainHeader,
+  .mainView {
+    padding: 0 30px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .mainHeader {
+    min-height: unset;
+    height: 90px;
+  }
+  .logo {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .mainHeader {
+    height: 80px;
+  }
+
+  .logo {
+    width: 65%;
+  }
+  .link1 {
+    font-size: 0.9rem;
+  }
 }
