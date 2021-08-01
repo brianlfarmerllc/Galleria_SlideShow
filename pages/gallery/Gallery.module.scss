@@ -4,15 +4,13 @@
   display: grid;
   border-top: solid #e5e5e5 1px;
   grid-template-columns: repeat(24, 1fr);
-  grid-template-rows: fit-content(50%);
-  gap: 10px;
 }
 
 .imageContainer {
   position: relative;
   grid-column: 1/9;
   grid-row-start: 1;
-  grid-row-end: 8;
+  grid-row-end: auto;
 }
 
 .heroImage {
@@ -29,8 +27,11 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background: black;
+  background: rgba($color: #000000, $alpha: 0.9);
   cursor: pointer;
+  &:hover {
+    background: rgba($color: #979797, $alpha: 0.7);
+  }
 }
 
 .artistImage {
@@ -59,7 +60,9 @@
   padding-left: 50px;
   grid-column: 8/15;
   grid-row-start: 1;
-  grid-row-end: auto;
+  min-height: 0;
+  min-width: 0;
+  height: max-content;
   z-index: 3;
   .paintingName {
     padding-bottom: 30px;
@@ -98,5 +101,41 @@
     text-decoration: underline;
     text-transform: uppercase;
     padding: 5rem 0rem 0rem 1rem;
+    &:hover {
+      color: black;
+    }
+  }
+}
+
+.controller {
+  position: absolute;
+  bottom: 0;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1360px;
+  padding: 25px 0px;
+  border-top: solid 2px;
+  border-image-slice: 1;
+
+  .controllerH3 {
+    padding-bottom: 5px;
+  }
+  .controllerH5 {
+    padding-top: 5px;
+  }
+  .controllerLinks {
+    width: 90px;
+    display: flex;
+    justify-content: space-between;
+    .controlBtn {
+      cursor: pointer;
+      &:hover {
+        opacity: 0.4;
+      }
+    }
   }
 }

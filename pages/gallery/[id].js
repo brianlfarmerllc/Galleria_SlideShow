@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import Layout from "../../components/layout";
 import { getAllPostIds, getOnePostData } from "../../utils/photos";
 import styles from "./Gallery.module.scss";
@@ -21,7 +22,12 @@ export async function getStaticPaths() {
 }
 
 export default function Post({ postData }) {
-  console.log(postData.name);
+  const index = parseInt(postData.id);
+  const next = index === 14 ? 0 : index + 1;
+  const previous = index > 0 ? index - 1 : 14;
+
+  const percent = Math.floor(((index + 1) / 15) * 100);
+
   return (
     <Layout>
       <Head>
@@ -56,9 +62,30 @@ export default function Post({ postData }) {
           </a>
         </div>
       </article>
-      <div className={styles.controller}>
-        <div className={styles.controllerText}></div>
-        <div className={styles.controllerbuttons}></div>
+      <div
+        className={styles.controller}
+        style={{ borderImageSource: `linear-gradient(to right, #000000 ${percent}%, #E5E5E5 1%)` }}
+      >
+        <div className={styles.controllerText}>
+          <h3 className={styles.controllerH3}>{postData.name}</h3>
+          <h5 className={styles.controllerH5}>{postData.artist.name}</h5>
+        </div>
+        <div className={styles.controllerLinks}>
+          <Link href={`/gallery/${previous}`}>
+            <img
+              className={styles.controlBtn}
+              src="/assets/shared/icon-back-button.svg"
+              alt="icon-back-button"
+            />
+          </Link>
+          <Link href={`/gallery/${next}`}>
+            <img
+              className={styles.controlBtn}
+              src="/assets/shared/icon-next-button.svg"
+              alt="icon-next-button"
+            />
+          </Link>
+        </div>
       </div>
     </Layout>
   );

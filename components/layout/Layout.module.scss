@@ -8,6 +8,10 @@
   padding: 40px 0px;
 }
 
+.logo {
+  cursor: pointer;
+}
+
 .link1 {
   font-size: 12px;
   letter-spacing: 2.5px;
@@ -15,6 +19,9 @@
   font-family: "Libre Baskerville", serif;
   color: #7d7d7d;
   text-transform: uppercase;
+  &:hover {
+    color: black;
+  }
 }
 
 .mainView {
