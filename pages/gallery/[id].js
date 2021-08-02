@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import { useState } from "react";
 import Layout from "../../components/layout";
 import { getAllPostIds, getOnePostData, useMediaQuery } from "../../utils/photos";
 import styles from "./Gallery.module.scss";
@@ -22,12 +23,18 @@ export async function getStaticPaths() {
 }
 
 export default function Post({ postData }) {
+  const [isOpen, setIsOpen] = useState(false);
+
   const is760 = useMediaQuery(760);
   const index = parseInt(postData.id);
   const next = index === 14 ? 0 : index + 1;
   const previous = index > 0 ? index - 1 : 14;
 
   const percent = Math.floor(((index + 1) / 15) * 100);
+
+  function toggleGallery() {
+    isOpen ? setIsOpen(false) : setIsOpen(true);
+  }
 
   return (
     <Layout>
@@ -41,7 +48,7 @@ export default function Post({ postData }) {
             src={is760 ? postData.images.hero.small : postData.images.hero.large}
             alt={postData.name}
           />
-          <div className={styles.viewImage}>
+          <div onClick={toggleGallery} className={styles.viewImage}>
             <img
               className={styles.viewsvg}
               src="/assets/shared/icon-view-image.svg"
@@ -92,6 +99,21 @@ export default function Post({ postData }) {
           </Link>
         </div>
       </div>
+
+      {isOpen ? (
+        <div className={styles.modal}>
+          <div className={styles.modalContainer}>
+            <h4 onClick={toggleGallery} className={styles.close}>
+              close
+            </h4>
+            <img
+              className={styles.galleryImage}
+              src={postData.images.gallery}
+              alt={postData.name}
+            />
+          </div>
+        </div>
+      ) : null}
     </Layout>
   );
 }

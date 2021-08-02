@@ -150,6 +150,39 @@
   }
 }
 
+.modal {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba($color: #000000, $alpha: 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .modalContainer {
+    margin: 4rem;
+  }
+
+  .close {
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    cursor: pointer;
+    text-align: end;
+    padding-bottom: 3rem;
+    &:hover {
+      color: #7d7d7d;
+    }
+  }
+  .galleryImage {
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 1280px) {
   .copyContainer {
     grid-column: 16/25;
@@ -222,6 +255,9 @@
       margin-top: 13rem;
       width: 100%;
     }
+  }
+  .modal {
+    grid-template-columns: 1.5fr 4fr 1.5fr;
   }
 }
 
