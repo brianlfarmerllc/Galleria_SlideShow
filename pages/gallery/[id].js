@@ -84,18 +84,22 @@ export default function Post({ postData }) {
         </div>
         <div className={styles.controllerLinks}>
           <Link href={`/gallery/${previous}`} passHref>
-            <img
-              className={styles.controlBtn}
-              src="/assets/shared/icon-back-button.svg"
-              alt="icon-back-button"
-            />
+            <a>
+              <img
+                className={styles.controlBtn}
+                src="/assets/shared/icon-back-button.svg"
+                alt="icon-back-button"
+              />
+            </a>
           </Link>
           <Link href={`/gallery/${next}`} passHref>
-            <img
-              className={styles.controlBtn}
-              src="/assets/shared/icon-next-button.svg"
-              alt="icon-next-button"
-            />
+            <a>
+              <img
+                className={styles.controlBtn}
+                src="/assets/shared/icon-next-button.svg"
+                alt="icon-next-button"
+              />
+            </a>
           </Link>
         </div>
       </div>
