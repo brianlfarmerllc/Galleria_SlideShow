@@ -21,17 +21,17 @@ export default function Layout({ children, home }) {
       </Head>
       <header className={styles.mainHeader}>
         <div>
-          <Link href="/">
+          <Link href="/" passHref>
             <img className={styles.logo} src="/assets/shared/logo.svg" alt="galleria-logo" />
           </Link>
         </div>
 
         {home ? (
-          <Link href="/gallery/0">
+          <Link href="/gallery/0" passHref>
             <a className={styles.link1}>start slideshow</a>
           </Link>
         ) : (
-          <Link href="/">
+          <Link href="/" passHref>
             <a className={styles.link1}>stop slideshow</a>
           </Link>
         )}

@@ -83,14 +83,14 @@ export default function Post({ postData }) {
           <h5 className={styles.controllerH5}>{postData.artist.name}</h5>
         </div>
         <div className={styles.controllerLinks}>
-          <Link href={`/gallery/${previous}`}>
+          <Link href={`/gallery/${previous}`} passHref>
             <img
               className={styles.controlBtn}
               src="/assets/shared/icon-back-button.svg"
               alt="icon-back-button"
             />
           </Link>
-          <Link href={`/gallery/${next}`}>
+          <Link href={`/gallery/${next}`} passHref>
             <img
               className={styles.controlBtn}
               src="/assets/shared/icon-next-button.svg"

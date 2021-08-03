@@ -20,13 +20,13 @@ export default function Home({ allPostsData }) {
           <div className={styles.imageList}>
             {allPostsData.map(({ id, images, name, artist }) => (
               <div key={id} className={styles.listItem}>
-                <Link href={`/gallery/${id}`}>
+                <Link href={`/gallery/${id}`} passHref>
                   <a className={styles.anchor}>
                     <img className={styles.imageItem} src={images.thumbnail} alt={id} />
                   </a>
                 </Link>
                 <div className={styles.overlay}></div>
-                <Link href={`/gallery/${id}`}>
+                <Link href={`/gallery/${id}`} passHref>
                   <div className={styles.imageText}>
                     <h2 className={styles.paintingName}>{name}</h2>
                     <h5 className={styles.artistName}>{artist.name}</h5>

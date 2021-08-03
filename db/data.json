@@ -6,9 +6,19 @@
     "source": "https://en.wikipedia.org/wiki/The_Starry_Night",
     "artist": {
       "image": "/assets/starry-night/artist.jpg",
-      "name": "Vincent Van Gogh"
+      "name": "Vincent Van Gogh",
+      "artistwidth": 128,
+      "artistheight": 128
     },
     "images": {
+      "gallerywidth": 917,
+      "galleryheight": 712,
+      "bigwidth": 950,
+      "bigheight": 1120,
+      "smallwidth": 654,
+      "smallheight": 560,
+      "thumbwidth": 327,
+      "thumbheight": 250,
       "thumbnail": "/assets/starry-night/thumbnail.jpg",
       "hero": {
         "small": "/assets/starry-night/hero-small.jpg",
@@ -24,9 +34,19 @@
     "source": "https://en.wikipedia.org/wiki/Girl_with_a_Pearl_Earring",
     "artist": {
       "image": "/assets/girl-with-pearl-earring/artist.jpg",
-      "name": "Johannes Vermeer"
+      "name": "Johannes Vermeer",
+      "artistwidth": 128,
+      "artistheight": 128
     },
     "images": {
+      "gallerywidth": 519,
+      "galleryheight": 712,
+      "bigwidth": 950,
+      "bigheight": 1120,
+      "smallwidth": 654,
+      "smallheight": 560,
+      "thumbwidth": 327,
+      "thumbheight": 400,
       "thumbnail": "/assets/girl-with-pearl-earring/thumbnail.jpg",
       "hero": {
         "small": "/assets/girl-with-pearl-earring/hero-small.jpg",
@@ -42,9 +62,19 @@
     "source": "https://en.wikipedia.org/wiki/Guernica_(Picasso)",
     "artist": {
       "image": "/assets/guernica/artist.jpg",
-      "name": "Pablo Picasso"
+      "name": "Pablo Picasso",
+      "artistwidth": 128,
+      "artistheight": 128
     },
     "images": {
+      "gallerywidth": 1253,
+      "galleryheight": 712,
+      "bigwidth": 950,
+      "bigheight": 1120,
+      "smallwidth": 654,
+      "smallheight": 560,
+      "thumbwidth": 327,
+      "thumbheight": 285,
       "thumbnail": "/assets/guernica/thumbnail.jpg",
       "hero": {
         "small": "/assets/guernica/hero-small.jpg",
@@ -60,9 +90,19 @@
     "source": "https://en.wikipedia.org/wiki/Penitent_Magdalene_(Artemisia_Gentileschi)",
     "artist": {
       "image": "/assets/penitent-magdalene/artist.jpg",
-      "name": "Artemisia Gentileschi"
+      "name": "Artemisia Gentileschi",
+      "artistwidth": 128,
+      "artistheight": 128
     },
     "images": {
+      "gallerywidth": 573,
+      "galleryheight": 712,
+      "bigwidth": 950,
+      "bigheight": 1120,
+      "smallwidth": 654,
+      "smallheight": 560,
+      "thumbwidth": 327,
+      "thumbheight": 250,
       "thumbnail": "/assets/penitent-magdalene/thumbnail.jpg",
       "hero": {
         "small": "/assets/penitent-magdalene/hero-small.jpg",
@@ -78,9 +118,19 @@
     "source": "https://en.wikipedia.org/wiki/The_Storm_on_the_Sea_of_Galilee",
     "artist": {
       "image": "/assets/storm-on-the-sea-of-galilee/artist.jpg",
-      "name": "Rembrandt"
+      "name": "Rembrandt",
+      "artistwidth": 128,
+      "artistheight": 128
     },
     "images": {
+      "gallerywidth": 597,
+      "galleryheight": 712,
+      "bigwidth": 950,
+      "bigheight": 1120,
+      "smallwidth": 654,
+      "smallheight": 560,
+      "thumbwidth": 327,
+      "thumbheight": 340,
       "thumbnail": "/assets/storm-on-the-sea-of-galilee/thumbnail.jpg",
       "hero": {
         "small": "/assets/storm-on-the-sea-of-galilee/hero-small.jpg",
@@ -96,9 +146,19 @@
     "source": "https://en.wikipedia.org/wiki/The_Great_Wave_off_Kanagawa",
     "artist": {
       "image": "/assets/the-great-wave-off-kanagawa/artist.jpg",
-      "name": "Hokusai"
+      "name": "Hokusai",
+      "artistwidth": 128,
+      "artistheight": 128
     },
     "images": {
+      "gallerywidth": 809,
+      "galleryheight": 712,
+      "bigwidth": 950,
+      "bigheight": 1120,
+      "smallwidth": 654,
+      "smallheight": 560,
+      "thumbwidth": 327,
+      "thumbheight": 280,
       "thumbnail": "/assets/the-great-wave-off-kanagawa/thumbnail.jpg",
       "hero": {
         "small": "/assets/the-great-wave-off-kanagawa/hero-small.jpg",
@@ -114,9 +174,19 @@
     "source": "https://en.wikipedia.org/wiki/Van_Gogh_self-portrait_(1889)",
     "artist": {
       "image": "/assets/van-gogh-self-portrait/artist.jpg",
-      "name": "Vincent Van Gogh"
+      "name": "Vincent Van Gogh",
+      "artistwidth": 128,
+      "artistheight": 128
     },
     "images": {
+      "gallerywidth": 597,
+      "galleryheight": 712,
+      "bigwidth": 950,
+      "bigheight": 1120,
+      "smallwidth": 654,
+      "smallheight": 560,
+      "thumbwidth": 327,
+      "thumbheight": 500,
       "thumbnail": "/assets/van-gogh-self-portrait/thumbnail.jpg",
       "hero": {
         "small": "/assets/van-gogh-self-portrait/hero-small.jpg",
@@ -132,9 +202,19 @@
     "source": "https://en.wikipedia.org/wiki/The_Sleeping_Gypsy",
     "artist": {
       "image": "/assets/the-sleeping-gypsy/artist.jpg",
-      "name": "Henri Rousseau"
+      "name": "Henri Rousseau",
+      "artistwidth": 128,
+      "artistheight": 128
     },
     "images": {
+      "gallerywidth": 1107,
+      "galleryheight": 712,
+      "bigwidth": 950,
+      "bigheight": 1120,
+      "smallwidth": 654,
+      "smallheight": 560,
+      "thumbwidth": 327,
+      "thumbheight": 250,
       "thumbnail": "/assets/the-sleeping-gypsy/thumbnail.jpg",
       "hero": {
         "small": "/assets/the-sleeping-gypsy/hero-small.jpg",
@@ -150,9 +230,19 @@
     "source": "https://en.wikipedia.org/wiki/Lady_with_an_Ermine",
     "artist": {
       "image": "/assets/lady-with-an-ermine/artist.jpg",
-      "name": "Leonardo da Vinci"
+      "name": "Leonardo da Vinci",
+      "artistwidth": 128,
+      "artistheight": 128
     },
     "images": {
+      "gallerywidth": 537,
+      "galleryheight": 712,
+      "bigwidth": 950,
+      "bigheight": 1120,
+      "smallwidth": 654,
+      "smallheight": 560,
+      "thumbwidth": 327,
+      "thumbheight": 420,
       "thumbnail": "/assets/lady-with-an-ermine/thumbnail.jpg",
       "hero": {
         "small": "/assets/lady-with-an-ermine/hero-small.jpg",
@@ -168,9 +258,19 @@
     "source": "https://en.wikipedia.org/wiki/The_Night_Caf%C3%A9",
     "artist": {
       "image": "/assets/the-night-cafe/artist.jpg",
-      "name": "Vincent Van Gogh"
+      "name": "Vincent Van Gogh",
+      "artistwidth": 128,
+      "artistheight": 128
     },
     "images": {
+      "gallerywidth": 947,
+      "galleryheight": 712,
+      "bigwidth": 950,
+      "bigheight": 1120,
+      "smallwidth": 654,
+      "smallheight": 560,
+      "thumbwidth": 327,
+      "thumbheight": 260,
       "thumbnail": "/assets/the-night-cafe/thumbnail.jpg",
       "hero": {
         "small": "/assets/the-night-cafe/hero-small.jpg",
@@ -186,9 +286,19 @@
     "source": "https://en.wikipedia.org/wiki/The_Basket_of_Apples",
     "artist": {
       "image": "/assets/the-basket-of-apples/artist.jpg",
-      "name": "Paul Cézanne"
+      "name": "Paul Cézanne",
+      "artistwidth": 128,
+      "artistheight": 128
     },
     "images": {
+      "gallerywidth": 869,
+      "galleryheight": 712,
+      "bigwidth": 950,
+      "bigheight": 1120,
+      "smallwidth": 654,
+      "smallheight": 560,
+      "thumbwidth": 327,
+      "thumbheight": 430,
       "thumbnail": "/assets/the-basket-of-apples/thumbnail.jpg",
       "hero": {
         "small": "/assets/the-basket-of-apples/hero-small.jpg",
@@ -204,9 +314,18 @@
     "source": "https://en.wikipedia.org/wiki/The_Boy_in_the_Red_Vest",
     "artist": {
       "image": "/assets/the-boy-in-the-red-vest/artist.jpg",
-      "name": "Paul Cézanne"
+      "name": "Paul Cézanne",
+      "artistwidth": 128,
+      "artistheight": 128
     },
     "images": {
+      "galleryheight": 712,
+      "bigwidth": 950,
+      "bigheight": 1120,
+      "smallwidth": 654,
+      "smallheight": 560,
+      "thumbwidth": 327,
+      "thumbheight": 260,
       "thumbnail": "/assets/the-boy-in-the-red-vest/thumbnail.jpg",
       "hero": {
         "small": "/assets/the-boy-in-the-red-vest/hero-small.jpg",
@@ -222,9 +341,19 @@
     "source": "https://en.wikipedia.org/wiki/Arnolfini_Portrait",
     "artist": {
       "image": "/assets/arnolfini-portrait/artist.jpg",
-      "name": "Jan van Eyck"
+      "name": "Jan van Eyck",
+      "artistwidth": 128,
+      "artistheight": 128
     },
     "images": {
+      "gallerywidth": 509,
+      "galleryheight": 712,
+      "bigwidth": 950,
+      "bigheight": 1120,
+      "smallwidth": 654,
+      "smallheight": 560,
+      "thumbwidth": 327,
+      "thumbheight": 330,
       "thumbnail": "/assets/arnolfini-portrait/thumbnail.jpg",
       "hero": {
         "small": "/assets/arnolfini-portrait/hero-small.jpg",
@@ -240,9 +369,19 @@
     "source": "https://en.wikipedia.org/wiki/Mona_Lisa",
     "artist": {
       "image": "/assets/mona-lisa/artist.jpg",
-      "name": "Leonardo da Vinci"
+      "name": "Leonardo da Vinci",
+      "artistwidth": 128,
+      "artistheight": 128
     },
     "images": {
+      "gallerywidth": 509,
+      "galleryheight": 712,
+      "bigwidth": 950,
+      "bigheight": 1120,
+      "smallwidth": 654,
+      "smallheight": 560,
+      "thumbwidth": 327,
+      "thumbheight": 525,
       "thumbnail": "/assets/mona-lisa/thumbnail.jpg",
       "hero": {
         "small": "/assets/mona-lisa/hero-small.jpg",
@@ -258,9 +397,19 @@
     "source": "https://en.wikipedia.org/wiki/The_Swing_(Fragonard)",
     "artist": {
       "image": "/assets/the-swing/artist.jpg",
-      "name": "Jean-Honoré Fragonard"
+      "name": "Jean-Honoré Fragonard",
+      "artistwidth": 128,
+      "artistheight": 128
     },
     "images": {
+      "gallerywidth": 585,
+      "galleryheight": 712,
+      "bigwidth": 950,
+      "bigheight": 1120,
+      "smallwidth": 654,
+      "smallheight": 560,
+      "thumbwidth": 327,
+      "thumbheight": 340,
       "thumbnail": "/assets/the-swing/thumbnail.jpg",
       "hero": {
         "small": "/assets/the-swing/hero-small.jpg",
