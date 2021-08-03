@@ -1,34 +1,66 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Frontend Mentor - Galleria slideshow site solution
 
-## Getting Started
+This is my solution to the [Galleria slideshow site challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/galleria-slideshow-site-tEA4pwsa6).
 
-First, run the development server:
+## Table of contents
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Overview
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+### The challenge
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Users should be able to:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- View the optimal layout for the app depending on their device's screen size
+- See hover states for all interactive elements on the page
+- Navigate the slideshow and view each painting in a lightbox
 
-## Learn More
+### Screenshot
 
-To learn more about Next.js, take a look at the following resources:
+![](./screenshot.png)
+![](./screenshot2.png)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Links
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Live Site URL: [https://galleria-slide-show.vercel.app/](https://galleria-slide-show.vercel.app/)
+- GitHub URL: [https://github.com/brianlfarmerllc/Galleria_SlideShow](https://github.com/brianlfarmerllc/Galleria_SlideShow)
 
-## Deploy on Vercel
+## My process
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Built with
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Semantic HTML5 markup
+- Flexbox
+- CSS Grid
+- Mobile-first workflow
+- [Next.js](https://nextjs.org/) - React framework
+
+### What I learned
+
+I wanted to do this project because it seemed like a perfect one to test on Next.js. I have been wanting to get started with Next after becoming more confident with react. I had a blast using it and it mad creating the individual gallery pages so much easier.
+
+### Continued development
+
+I did not take the time to optomize the image sizes so things load slowly but I plan on fixing this soon as well as checking out how to implement the next/image tag. I tried it out but the images had some strange behaviour that I could not figure out. I also want to learn how to implement page transitions with Next js so look for an updated solution soon.
+
+### Useful resources
+
+- [NextJs Basics Tutorial](https://nextjs.org/learn/basics/create-nextjs-app?utm_source=next-site&utm_medium=homepage-cta&utm_campaign=next-website) - I learned more from the documentation tutorial than any intro to js video I watched on youtube. This tutorial is basic but it teaches you how to use static props and how to get started creating something
+- [Next Js Documentation](https://nextjs.org/docs/getting-started) - Documentation from Next is top notch.
+
+## Author
+
+- Website - [Brian Farmer](https://brianfarmerwebdev.netlify.app)
+- GitHub URL: - [GitHub URL](https://github.com/brianlfarmerllc)
+- Frontend Mentor - [@brianlfarmerllc](https://www.frontendmentor.io/profile/brianlfarmerllc)
