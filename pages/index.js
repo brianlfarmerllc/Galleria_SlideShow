@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Layout from "../components/layout";
+import Image from "next/image";
 import styles from "../styles/Home.module.scss";
 import { getPostData } from "../utils/photos";
 
@@ -22,7 +23,14 @@ export default function Home({ allPostsData }) {
               <div key={id} className={styles.listItem}>
                 <Link href={`/gallery/${id}`} passHref>
                   <a className={styles.anchor}>
-                    <img className={styles.imageItem} src={images.thumbnail} alt={id} />
+                    <Image
+                      className={styles.imageItem}
+                      src={images.thumbnail}
+                      alt={id}
+                      width={images.thumbwidth}
+                      height={images.thumbheight}
+                      priority
+                    />
                   </a>
                 </Link>
                 <div className={styles.overlay}></div>
