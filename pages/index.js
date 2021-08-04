@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Link from "next/link";
 import Layout from "../components/layout";
 import Image from "next/image";
@@ -17,6 +18,9 @@ export default function Home({ allPostsData }) {
   return (
     <>
       <Layout home>
+        <Head>
+          <title>NextJs Galleria</title>
+        </Head>
         <section className={styles.mainGallery}>
           <div className={styles.imageList}>
             {allPostsData.map(({ id, images, name, artist }) => (
@@ -40,7 +44,7 @@ export default function Home({ allPostsData }) {
                 <Link href={`/gallery/${id}`} passHref>
                   <div className={styles.imageText}>
                     <h2 className={styles.paintingName}>{name}</h2>
-                    <h5 className={styles.artistName}>{artist.name}</h5>
+                    <p className={`${styles.artistName} ${styles.header5}`}>{artist.name}</p>
                   </div>
                 </Link>
               </div>
