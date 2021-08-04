@@ -57,6 +57,7 @@ export default function Post({ postData }) {
             layout="responsive"
             placeholder="blur"
             priority="true"
+            key={postData.name}
           />
           <div onClick={toggleGallery} className={styles.viewImage}>
             <Image className={styles.viewsvg} src={viewSVG} alt="icon-view-image" />
@@ -69,6 +70,10 @@ export default function Post({ postData }) {
               alt={postData.artist.name}
               width={postData.artist.artistwidth}
               height={postData.artist.artistheight}
+              blurDataURL={postData.artist.image}
+              placeholder="blur"
+              priority="true"
+              key={postData.artist.name}
             />
           </div>
         </div>
