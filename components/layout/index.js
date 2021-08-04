@@ -1,6 +1,8 @@
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
 import styles from "./Layout.module.scss";
+import logo from "../../public/assets/shared/logo.svg";
 
 export default function Layout({ children, home }) {
   return (
@@ -22,7 +24,7 @@ export default function Layout({ children, home }) {
       <header className={styles.mainHeader}>
         <div>
           <Link href="/" passHref>
-            <img className={styles.logo} src="/assets/shared/logo.svg" alt="galleria-logo" />
+            <Image className={styles.logo} src={logo} alt="galleria-logo" priority />
           </Link>
         </div>
 

@@ -1,9 +1,13 @@
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import Layout from "../../components/layout";
 import { getAllPostIds, getOnePostData, useMediaQuery } from "../../utils/photos";
 import styles from "./Gallery.module.scss";
+import viewSVG from "../../public/assets/shared/icon-view-image.svg";
+import iconBack from "../../public/assets/shared/icon-back-button.svg";
+import iconNext from "../../public/assets/shared/icon-next-button.svg";
 
 export async function getStaticProps({ params }) {
   const postData = await getOnePostData(params.id);
@@ -43,24 +47,30 @@ export default function Post({ postData }) {
       </Head>
       <article className={styles.galleryContent}>
         <div className={styles.imageContainer}>
-          <img
+          <Image
             className={styles.heroImage}
             src={is760 ? postData.images.hero.small : postData.images.hero.large}
             alt={postData.name}
+            width={is760 ? postData.images.smallwidth : postData.images.bigwidth}
+            height={is760 ? postData.images.smallheight : postData.images.bigheight}
+            blurDataURL={postData.images.thumbnail}
+            layout="responsive"
+            placeholder="blur"
+            priority="true"
           />
           <div onClick={toggleGallery} className={styles.viewImage}>
-            <img
-              className={styles.viewsvg}
-              src="/assets/shared/icon-view-image.svg"
-              alt="icon-view-image"
-            />
+            <Image className={styles.viewsvg} src={viewSVG} alt="icon-view-image" />
             <p className={styles.viewText}>View Image</p>
           </div>
-          <img
-            className={styles.artistImage}
-            src={postData.artist.image}
-            alt={postData.artist.name}
-          />
+          <div className={styles.artistImage}>
+            <Image
+              className={styles.artistImage}
+              src={postData.artist.image}
+              alt={postData.artist.name}
+              width={postData.artist.artistwidth}
+              height={postData.artist.artistheight}
+            />
+          </div>
         </div>
         <div className={styles.titleContainer}>
           <h1 className={styles.paintingName}>{postData.name}</h1>
@@ -85,20 +95,12 @@ export default function Post({ postData }) {
         <div className={styles.controllerLinks}>
           <Link href={`/gallery/${previous}`} passHref>
             <a>
-              <img
-                className={styles.controlBtn}
-                src="/assets/shared/icon-back-button.svg"
-                alt="icon-back-button"
-              />
+              <Image className={styles.controlBtn} src={iconBack} alt="icon-back-button" />
             </a>
           </Link>
           <Link href={`/gallery/${next}`} passHref>
             <a>
-              <img
-                className={styles.controlBtn}
-                src="/assets/shared/icon-next-button.svg"
-                alt="icon-next-button"
-              />
+              <Image className={styles.controlBtn} src={iconNext} alt="icon-next-button" />
             </a>
           </Link>
         </div>
@@ -110,10 +112,12 @@ export default function Post({ postData }) {
             <h4 onClick={toggleGallery} className={styles.close}>
               close
             </h4>
-            <img
+            <Image
               className={styles.galleryImage}
               src={postData.images.gallery}
               alt={postData.name}
+              width={postData.images.gallerywidth}
+              height={postData.images.galleryheight}
             />
           </div>
         </div>

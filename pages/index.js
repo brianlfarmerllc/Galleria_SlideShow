@@ -29,7 +29,10 @@ export default function Home({ allPostsData }) {
                       alt={id}
                       width={images.thumbwidth}
                       height={images.thumbheight}
-                      priority
+                      blurDataURL={images.thumbnail}
+                      layout="responsive"
+                      placeholder="blur"
+                      priority="true"
                     />
                   </a>
                 </Link>
