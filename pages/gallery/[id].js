@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import { useState } from "react";
 import Layout from "../../components/layout";
 import { getAllPostIds, getOnePostData, useMediaQuery } from "../../utils/photos";
@@ -40,12 +41,23 @@ export default function Post({ postData }) {
     isOpen ? setIsOpen(false) : setIsOpen(true);
   }
 
+  const variants = {
+    inital: { opacity: 0, y: 20 },
+    animate: { opacity: 1, y: 0, transition: { delay: 1, duration: 1.5, type: "tween" } },
+  };
+
   return (
     <Layout>
       <Head>
         <title>{postData.name}</title>
       </Head>
-      <article className={styles.galleryContent}>
+      <motion.article
+        key={postData.name}
+        variants={variants}
+        initial="inital"
+        animate="animate"
+        className={styles.galleryContent}
+      >
         <div className={styles.imageContainer}>
           <Image
             className={styles.heroImage}
@@ -88,7 +100,7 @@ export default function Post({ postData }) {
             go to source
           </a>
         </div>
-      </article>
+      </motion.article>
       <div
         className={styles.controller}
         style={{ borderImageSource: `linear-gradient(to right, #000000 ${percent}%, #E5E5E5 1%)` }}

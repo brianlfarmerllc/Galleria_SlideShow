@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import Layout from "../components/layout";
 import Image from "next/image";
 import styles from "../styles/Home.module.scss";
@@ -15,13 +16,18 @@ export async function getStaticProps() {
 }
 
 export default function Home({ allPostsData }) {
+  const variants = {
+    inital: { opacity: 0, y: 20 },
+    animate: { opacity: 1, y: 0, transition: { delay: 1, duration: 1.5, type: "tween" } },
+  };
+
   return (
     <>
       <Layout home>
         <Head>
           <title>NextJs Galleria</title>
         </Head>
-        <section className={styles.mainGallery}>
+        <motion.section variants={variants} initial="inital" animate="animate" className={styles.mainGallery}>
           <div className={styles.imageList}>
             {allPostsData.map(({ id, images, name, artist }) => (
               <div key={id} className={styles.listItem}>
@@ -50,7 +56,7 @@ export default function Home({ allPostsData }) {
               </div>
             ))}
           </div>
-        </section>
+        </motion.section>
       </Layout>
     </>
   );

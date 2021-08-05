@@ -2,7 +2,6 @@
   min-height: 72vh;
   padding: 50px 0px;
   display: grid;
-  border-top: solid #e5e5e5 1px;
   grid-template-columns: repeat(24, 1fr);
   grid-template-rows: 1fr;
   position: relative;
@@ -165,6 +164,7 @@
 
   .modalContainer {
     margin: 4rem;
+    width: 30%;
   }
 
   .close {
@@ -177,9 +177,6 @@
     &:hover {
       color: #7d7d7d;
     }
-  }
-  .galleryImage {
-    width: 100%;
   }
 }
 
@@ -227,6 +224,13 @@
       width: 100%;
     }
   }
+
+  .modal {
+    grid-template-columns: 1.5fr 4fr 1.5fr;
+    .modalContainer {
+      width: 40%;
+    }
+  }
 }
 @media screen and (max-width: 990px) {
   .imageContainer {
@@ -257,7 +261,9 @@
     }
   }
   .modal {
-    grid-template-columns: 1.5fr 4fr 1.5fr;
+    .modalContainer {
+      width: 45%;
+    }
   }
 }
 
@@ -309,6 +315,12 @@
     .bodyCopy {
       margin-top: 14rem;
       width: 100%;
+    }
+  }
+
+  .modal {
+    .modalContainer {
+      width: 45%;
     }
   }
 }
