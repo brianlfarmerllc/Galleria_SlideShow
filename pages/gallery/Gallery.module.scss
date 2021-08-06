@@ -29,6 +29,7 @@
   align-items: center;
   padding: 20px;
   background: rgba($color: #000000, $alpha: 0.9);
+  border: none;
   cursor: pointer;
   &:hover {
     background: rgba($color: #979797, $alpha: 0.7);
@@ -166,14 +167,20 @@
     margin: 4rem;
     width: 30%;
   }
-
+  .closeContainer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
   .close {
     color: white;
     text-transform: uppercase;
     letter-spacing: 3px;
     cursor: pointer;
     text-align: end;
-    padding-bottom: 3rem;
+    padding-bottom: 1rem;
+    background: none;
+    border: none;
     &:hover {
       color: #7d7d7d;
     }

@@ -43,7 +43,7 @@ export default function Post({ postData }) {
 
   const variants = {
     inital: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0, transition: { delay: 1, duration: 1.5, type: "tween" } },
+    animate: { opacity: 1, y: 0, transition: { delay: 0.5, duration: 1.5, type: "tween" } },
   };
 
   return (
@@ -71,10 +71,10 @@ export default function Post({ postData }) {
             priority="true"
             key={postData.name}
           />
-          <div onClick={toggleGallery} className={styles.viewImage}>
+          <button onClick={toggleGallery} className={styles.viewImage}>
             <Image className={styles.viewsvg} src={viewSVG} alt="icon-view-image" />
             <p className={styles.viewText}>View Image</p>
-          </div>
+          </button>
           <div className={styles.artistImage}>
             <Image
               className={styles.artistImage}
@@ -126,9 +126,11 @@ export default function Post({ postData }) {
       {isOpen ? (
         <div className={styles.modal}>
           <div className={styles.modalContainer}>
-            <h4 onClick={toggleGallery} className={styles.close}>
-              close
-            </h4>
+            <div className={styles.closeContainer}>
+              <button onClick={toggleGallery} className={styles.close}>
+                <h4 className={styles.close}>close</h4>
+              </button>
+            </div>
             <Image
               className={styles.galleryImage}
               src={postData.images.gallery}
