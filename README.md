@@ -43,7 +43,7 @@ Users should be able to:
 - Semantic HTML5 markup
 - Flexbox
 - CSS Grid
-- Mobile-first workflow
+- Framer-Motion for animations
 - [Next.js](https://nextjs.org/) - React framework
 
 ### What I learned
