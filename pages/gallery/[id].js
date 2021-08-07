@@ -45,6 +45,7 @@ export default function Post({ postData }) {
   const variants = {
     inital: { opacity: 0, x: direction },
     animate: { opacity: 1, x: 0, transition: { delay: 0.2, duration: 1.3, type: "tween" } },
+    exit: { opacity: 0, transition: { duration: 0.5 } },
   };
 
   return (
@@ -57,6 +58,7 @@ export default function Post({ postData }) {
         variants={variants}
         initial="inital"
         animate="animate"
+        exit="exit"
         className={styles.galleryContent}
       >
         <div className={styles.imageContainer}>
@@ -111,7 +113,7 @@ export default function Post({ postData }) {
           <h5 className={styles.controllerH5}>{postData.artist.name}</h5>
         </div>
         <div className={styles.controllerLinks}>
-          <Link href={`/gallery/${previous}`} passHref>
+          <Link scroll={false} href={`/gallery/${previous}`} passHref>
             <a
               onClick={() => {
                 setDirection(-1000);
@@ -120,7 +122,7 @@ export default function Post({ postData }) {
               <Image className={styles.controlBtn} src={iconBack} alt="icon-back-button" />
             </a>
           </Link>
-          <Link href={`/gallery/${next}`} passHref>
+          <Link scroll={false} href={`/gallery/${next}`} passHref>
             <a
               onClick={() => {
                 setDirection(1000);

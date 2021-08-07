@@ -19,6 +19,7 @@ export default function Home({ allPostsData }) {
   const variants = {
     inital: { opacity: 0, y: 10 },
     animate: { opacity: 1, y: 0, transition: { delay: 0.5, duration: 1.5, type: "tween" } },
+    exit: { opacity: 0, transition: { duration: 0.5 } },
   };
 
   return (
@@ -28,8 +29,8 @@ export default function Home({ allPostsData }) {
           <title>NextJs Galleria</title>
         </Head>
         <motion.section
-          key="gallery-section"
           variants={variants}
+          exit="exit"
           initial="inital"
           animate="animate"
           className={styles.mainGallery}
@@ -37,7 +38,7 @@ export default function Home({ allPostsData }) {
           <div className={styles.imageList}>
             {allPostsData.map(({ id, images, name, artist }) => (
               <div key={id} className={styles.listItem}>
-                <Link href={`/gallery/${id}`} passHref>
+                <Link scroll={false} href={`/gallery/${id}`} passHref>
                   <a className={styles.anchor}>
                     <Image
                       className={styles.imageItem}
