@@ -1,3 +1,5 @@
+import { DirectionContext } from "../../pages/_app";
+import { useContext } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
@@ -5,6 +7,7 @@ import { motion } from "framer-motion";
 import logo from "../../public/assets/shared/logo.svg";
 
 export default function Layout({ children, home }) {
+  const { setExitDirection, setDirection } = useContext(DirectionContext);
   return (
     <>
       <Head>
@@ -15,22 +18,29 @@ export default function Layout({ children, home }) {
       <motion.header inital={{ opacity: 1 }} animate={{ opacity: 1 }} exit={{ opacity: 1 }} className="mainHeader">
         <div>
           <Link href="/" passHref>
-            <Image className="logo" src={logo} alt="galleria-logo" priority />
+            <a onClick={() => setExitDirection(0)}>
+              <Image className="logo" src={logo} alt="galleria-logo" priority />
+            </a>
           </Link>
         </div>
 
         {home ? (
           <Link href="/gallery/0" passHref>
-            <a className="link1">start slideshow</a>
+            <a onClick={() => setDirection(1000)} className="link1">
+              start slideshow
+            </a>
           </Link>
         ) : (
           <Link href="/" passHref>
-            <a className="link1">stop slideshow</a>
+            <a onClick={() => setExitDirection(0)} className="link1">
+              stop slideshow
+            </a>
           </Link>
         )}
       </motion.header>
 
       <main className="mainView">{children}</main>
+
       <style>{`
        .mainHeader {
         margin: auto;

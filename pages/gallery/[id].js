@@ -1,3 +1,5 @@
+import { DirectionContext } from "../_app";
+import { useContext } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
@@ -27,9 +29,9 @@ export async function getStaticPaths() {
 }
 
 export default function Post({ postData }) {
+  const { direction, setDirection, exitDirection, setExitDirection } = useContext(DirectionContext);
+
   const [isOpen, setIsOpen] = useState(false);
-  const [direction, setDirection] = useState(0);
-  const exitDirection = direction === 1000 ? -1000 : 1000;
 
   const is760 = useMediaQuery(760);
   const index = parseInt(postData.id);
@@ -45,7 +47,7 @@ export default function Post({ postData }) {
   const variants = {
     inital: { opacity: 0, x: direction },
     animate: { opacity: 1, x: 0, transition: { delay: 0.2, duration: 1.3, type: "tween" } },
-    exit: { opacity: 0, transition: { duration: 0.5 } },
+    exit: { opacity: 0, x: exitDirection, transition: { duration: 0.5 } },
   };
 
   return (
@@ -117,7 +119,7 @@ export default function Post({ postData }) {
             <Link scroll={false} href={`/gallery/${previous}`} passHref>
               <a
                 onClick={() => {
-                  console.log("-1000");
+                  setExitDirection(1000);
                   setDirection(-1000);
                 }}
               >
@@ -127,7 +129,7 @@ export default function Post({ postData }) {
             <Link scroll={false} href={`/gallery/${next}`} passHref>
               <a
                 onClick={() => {
-                  console.log("1000");
+                  setExitDirection(-1000);
                   setDirection(1000);
                 }}
               >

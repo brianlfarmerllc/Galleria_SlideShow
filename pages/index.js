@@ -1,3 +1,5 @@
+import { DirectionContext } from "./_app";
+import { useContext } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -15,6 +17,8 @@ export async function getStaticProps() {
 }
 
 export default function Home({ allPostsData }) {
+  const { setDirection } = useContext(DirectionContext);
+
   const variants = {
     inital: { opacity: 0, y: 10 },
     animate: { opacity: 1, y: 0, transition: { delay: 0.5, duration: 1.5, type: "tween" } },
@@ -32,7 +36,7 @@ export default function Home({ allPostsData }) {
             {allPostsData.map(({ id, images, name, artist }) => (
               <div key={id} className="listItem">
                 <Link scroll={false} href={`/gallery/${id}`} passHref>
-                  <a className="anchor">
+                  <a onClick={() => setDirection(1000)} className="anchor">
                     <Image
                       className="imageItem"
                       src={images.thumbnail}
