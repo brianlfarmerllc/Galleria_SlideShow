@@ -33,7 +33,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [https://galleria-slide-show.vercel.app/](https://galleria-slide-show.vercel.app/)
+- Live Site URL: [https://galleria-slide-show-brianlfarmerllc.vercel.app/](https://galleria-slide-show-brianlfarmerllc.vercel.app/)
 - GitHub URL: [https://github.com/brianlfarmerllc/Galleria_SlideShow](https://github.com/brianlfarmerllc/Galleria_SlideShow)
 
 ## My process
